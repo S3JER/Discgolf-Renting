@@ -1,3 +1,4 @@
+using DiscGolfRental.Db;
 using DiscGolfRental.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,8 +10,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddDbContext<DiscDatabaseContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 builder.Services.AddControllers();
 
 var app = builder.Build();
@@ -24,25 +26,24 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-var summaries = new[]
+app.MapGet("/available-discs", async (DiscDatabaseContext db) =>
 {
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
+    return await db.Discs
+        .Where(d => !db.Rentals.Any(r => r.DiscId == d.Id && r.DueDate >= DateTime.Now))
+        .ToListAsync();
+});
 
-app.MapGet("/weatherforecast", () =>
+app.MapPost("/create-rental", async (Rental rental, DiscDatabaseContext db) =>
 {
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast").
-WithOpenApi();
+    if (rental.DueDate > rental.RentalDate.AddDays(3))
+    {
+        return Results.BadRequest("Lejeperioden kan ikke være længere end 3 dage.");
+    }
+
+    db.Rentals.Add(rental);
+    await db.SaveChangesAsync();
+    return Results.Created($"/rentals/{rental.Id}", rental);
+});
 
 app.Run();
 
