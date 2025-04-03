@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "ABawhBPax6MDhHxH/ZOWNNCUzqwDfzf2+Q848z+sdZzhDHzCz4ixhzLtDZXwZgQ9ir7sHradWPm6kUR8s1sYEw==",
+  "dgSpecHash": "BQZdQBnNHeVr7mGpSiwGV3tfQkrFUB6/lHyr0mEuZ9cCFLSY3GAPXi415C/4hTEuu0ytYlygGMr2881QHdW5ng==",
   "success": true,
-  "projectFilePath": "C:\\Github\\Discgolf-Renting\\DiscGolfRental\\DiscGolfRental.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\GitHub\\Discgolf-Renting\\DiscGolfRental\\DiscGolfRental.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\thoma\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.11\\microsoft.aspnetcore.openapi.8.0.11.nupkg.sha512",
+    "C:\\Users\\thoma\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\thoma\\.nuget\\packages\\microsoft.openapi\\1.6.14\\microsoft.openapi.1.6.14.nupkg.sha512",
+    "C:\\Users\\thoma\\.nuget\\packages\\swashbuckle.aspnetcore\\6.6.2\\swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
+    "C:\\Users\\thoma\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.6.2\\swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
+    "C:\\Users\\thoma\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.6.2\\swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",
+    "C:\\Users\\thoma\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.6.2\\swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DiscGolfRental")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c295440ded21c413bd6a45a6e43bcb74e5ad152")]
 [assembly: System.Reflection.AssemblyProductAttribute("DiscGolfRental")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DiscGolfRental")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
