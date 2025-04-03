@@ -1,0 +1,82 @@
+# .NET build output
+/bin/
+/obj/
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows Installer log files
+*.cab
+*.log
+
+# Windows Installer files
+*.pdb
+
+# Windows Installer temporary files
+*.tmp
+
+# Windows Installer patch files
+*.patch
+
+# JetBrains Rider
+.idea/
+
+# VS Code settings folder
+.vscode/
+
+# .NET Core and ASP.NET Core web application files
+wwwroot/
+
+# Windows Installer patches
+*.cab
+
+# Node.js and npm
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Tye
+.tye/
+
+# JetBrains Rider config folder
+.idea/
+
+# DotNet test results
+TestResults/
+
+# Backup folder for Visual Studio for Mac
+.vs/
+
+# MacOS
+.DS_Store
+
+# Linux
+*~
+
+# .NET SDK restore folders
+.vs2019/
+.vs2017/
+.vs2015/
+.vs2013/
+
+# User-specific files for Rider
+.idea/
+
+# Logs
+logs/
+
+# Build artifacts from CI/CD
+artifacts/

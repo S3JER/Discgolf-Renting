@@ -1,0 +1,6 @@
+@DiscGolfRental_HostAddress = http://localhost:5143
+
+GET {{DiscGolfRental_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
